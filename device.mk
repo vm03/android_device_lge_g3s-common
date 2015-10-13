@@ -102,13 +102,6 @@ PRODUCT_PACKAGES += \
     libxml2 \
     com.android.future.usb.accessory
 
-# NFC packages
-PRODUCT_PACKAGES += \
-    NfcNci \
-    Tag \
-    nfc_nci.pn54x.default \
-    com.android.nfc_extras
-
 # Omx
 PRODUCT_PACKAGES += \
     libdivxdrmdecrypt \

@@ -152,10 +152,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     power.msm8226
 
-# QRNG
-PRODUCT_PACKAGES += \
-    qrngp
-
 # Wifi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
@@ -169,7 +165,8 @@ PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf \
     wpa_supplicant_overlay.conf \
     libwpa_client \
-    hwaddrs
+    hwaddrs \
+    librmnetctl
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \

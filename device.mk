@@ -86,6 +86,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     keystore.msm8226
 
+KEYMASTER_SYMLINKS:
+    mkdir -p $(TARGET_OUT)/vendor/firmware/keymaster
+    ln -sf /system/lib/modules/pronto/pronto_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
+    ln -sf /firmware/image/keymaste.b00 $(TARGET_OUT)/vendor/firmware/keymaster/keymaster.b00
+    ln -sf /firmware/image/keymaste.b01 $(TARGET_OUT)/vendor/firmware/keymaster/keymaster.b01
+    ln -sf /firmware/image/keymaste.b02 $(TARGET_OUT)/vendor/firmware/keymaster/keymaster.b02
+    ln -sf /firmware/image/keymaste.b03 $(TARGET_OUT)/vendor/firmware/keymaster/keymaster.b03
+    ln -sf /firmware/image/keymaste.mdt $(TARGET_OUT)/vendor/firmware/keymaster/keymaster.mdt
+
+ALL_DEFAULT_INSTALLED_MODULES += KEYMASTER_SYMLINKS
+
 # Keyhandler
 PRODUCT_PACKAGES += \
     com.cyanogenmod.keyhandler

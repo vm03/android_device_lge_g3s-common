@@ -13,11 +13,6 @@ etc/firmware/cpp_firmware_v1_2_1.fw
 etc/firmware/fw_bcmdhd_apsta.bin
 etc/firmware/fw_bcmdhd.bin
 etc/firmware/fw_bcmdhd_mfg.bin
-#etc/firmware/keymaster.b00
-#etc/firmware/keymaster.b01
-#etc/firmware/keymaster.b02
-#etc/firmware/keymaster.b03
-#etc/firmware/keymaster.mdt
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
 etc/firmware/nfc_test.bin
@@ -32,6 +27,11 @@ etc/firmware/venus.b03
 etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
+vendor/firmware/keymaster/keymaster.b00
+vendor/firmware/keymaster/keymaster.b01
+vendor/firmware/keymaster/keymaster.b02
+vendor/firmware/keymaster/keymaster.b03
+vendor/firmware/keymaster/keymaster.mdt
 vendor/firmware/libpn547_fw.so
 vendor/firmware/BCM4334B0_002.001.013.1820.2163.hcd
 

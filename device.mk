@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320
 
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8226
+
 # Keyhandler
 PRODUCT_PACKAGES += \
     com.cyanogenmod.keyhandler

@@ -182,7 +182,7 @@ lib/libloc_api_v02.so
 lib/libloc_ds_api.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
-vendor/lib/Bliblbs_core.so
+vendor/lib/liblbs_core.so
 vendor/lib/liblocationservice.so
 vendor/lib/libquipc_os_api.so
 vendor/lib/libulp2.so

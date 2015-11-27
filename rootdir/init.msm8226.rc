@@ -409,16 +409,23 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
-#Load MAC's
-service conn_init /system/bin/hwaddrs
+#Load MAC's for BRCM
+service brcm_hwaddrs /system/bin/hwaddrs
     user root
     group system wifi bluetooth net_bt_admin misc net_bt_stack
-    disabled
     oneshot
+    class late_start
 
-#on property:init.svc.conn_init=stopped
-#    chmod 644 /data/misc/bdaddr
-#    chmod 644 /data/misc/wifi/config
+service brcm_hwaddrs2 /system/bin/bdaddr_loader
+    user root
+    group system wifi bluetooth net_bt_admin misc net_bt_stack
+    oneshot
+    disabled
+
+on property:init.svc.brcm_hwaddrs=stopped
+    chmod 644 /data/misc/wifi/config
+    chmod 644 /data/misc/bdaddr
+    start brcm_hwaddrs2
 
 service dhcpcd_wlan0 /system/bin/dhcpcd -aABDKL
     class late_start
